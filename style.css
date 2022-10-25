@@ -1,0 +1,139 @@
+/* INITIALISATION DE TOUTES LES MARGES */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 14px;
+    font-family: 'Tw Cen Mt';
+}
+
+/* Style du contenu en background */
+.overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    position: absolute;
+    background-size: cover;
+    background: url('fond.jpg') center no-repeat;
+}
+
+/* STYLE DE L'ENTETE */
+header {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;padding: 30px 0 10px;
+}
+/* Style de l'image d'icone */
+nav .logo {
+    width: 170px;
+}
+/* Style du menu icon */
+nav .menu {
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+nav .menu .menu-icon {
+    width: 40px;
+    height: 30px;
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+nav .menu .menu-icon .line {
+    width: 100%;
+    height: 2.5px;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    transition: color .3s linear;
+}
+.l1 {
+    transform: translateY(-10px);
+}
+.l3 {
+    transform: translateY(10px);
+}
+/* Animation au survol */
+nav .menu .menu-icon:hover .line {
+    background-color: #2eb0f0;
+}
+/* Style des sections de menu */
+nav ul {
+    flex: 1;                /* Prend tout l'espace disponible*/
+    display: flex;
+    padding-right: 40px;
+    justify-content: flex-end;
+}
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color .3s;
+    text-decoration: none;
+}
+/* Animation des liens du menu survolés */
+nav ul li a:hover {
+    color: #2eb0f0;
+}
+/* Style du texte de présentation */
+.text {
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px 20px;
+}
+.text h1 {
+    line-height: 2;
+    font-size: 75px;
+    margin-bottom: 2rem;
+}
+.text p {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+/* Style des liens de contact et de cv */
+.text a {
+    color: #2eb0f0;
+    margin-right: 30px;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #2eb0f0;
+    transition: background-color .3s linear, color .2s linear;
+}
+.text a.cv {
+    font-weight: 600;
+    color: #121212;
+    background-color: #2eb0f0;
+}
+/* Animation des liens de contact et de cv */
+.text a.contact:hover {
+    background-color: #f1f1f1;
+}
+.text a.cv:hover {
+    color: #2eb0f0;
+    background-color: #f1f1f1;
+}

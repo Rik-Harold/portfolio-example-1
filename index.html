@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accueil</title>
+</head>
+<body>
+    <!-- ENTETE DU TEMPLATE -->
+    <header>
+        <!-- Barre de navigation -->
+        <nav>
+            <!-- Logo d'accueil (R => Rik) -->
+            <a href="#"><img src="r.png" alt="rik" class="logo"></a>
+            <!-- Liste des liens de navigation -->
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="# ">Services</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+            <!-- Bouton du menu hamburger-->
+            <div class="menu">
+                <button class="menu-icon">
+                    <span class="line l1"></span>
+                    <span class="line l2"></span>
+                    <span class="line l3"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="text">
+        <h1>Je suis <span class="auto-typing"></span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ratione. <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <!-- Ajout de liens -->
+        <a href="#" class="contact">Me contacter</a>
+        <a href="#" class="cv">Mon CV</a>
+    </section>
+
+    <!-- Contenu arrière-plan -->
+    <div class="overlay">
+
+    </div>
+
+    <!-- Lien CDN de typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Traitement de l'animation -->
+    <script>
+        // Création de l'animation
+        let typed = new Typed('.auto-typing', {
+            strings: ['front-end', 'back-end', 'full-stack'],
+            typeSpeed: 100,     /* Vitesse de saisie*/
+            backSpeed: 100,     /* Vitesse de supression*/
+            loop: true,         /* Affichage en boucle */
+            fadeOut: true,      /* Effet fade actif */
+            fadeOutClass: 'typed-fade-out',
+            fadeOutDelay: 500
+        })
+    </script>
+</body>
+</html>
